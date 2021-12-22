@@ -1,0 +1,20 @@
+<div *ngIf="!dataLoaded" class="spinner-grow text-danger" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<table *ngIf="dataLoaded" class="table caption-top">
+  <caption>
+    Marka Listesi
+  </caption>
+  <thead class="table-dark">
+    <tr>
+      <td>#</td>
+      <td>Marka Adı</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let brand of brands">
+      <td>{{ brand.id }}</td>
+      <td>{{ brand.name }}</td>
+    </tr>
+  </tbody>
+</table>
